@@ -1,2 +1,2 @@
-# Crystalchar
+# Crystalchat
 Connect Clearly. Chat Instantly.

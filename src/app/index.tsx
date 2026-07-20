@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { router } from "expo-router";
 
 export default function HomeScreen() {
   return (
@@ -13,11 +14,21 @@ export default function HomeScreen() {
         A simple, secure and modern way to connect with people.
       </Text>
 
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+  style={styles.button}
+  onPress={() => router.push("/auth/signup")}
+>
+  <Text style={styles.buttonText}>Create Account</Text>
+</TouchableOpacity>
         <Text style={styles.buttonText}>Create Account</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.loginButton}>
+      <TouchableOpacity
+  style={styles.loginButton}
+  onPress={() => router.push("/auth/login")}
+>
+  <Text style={styles.loginText}>Login</Text>
+</TouchableOpacity>
         <Text style={styles.loginText}>Login</Text>
       </TouchableOpacity>
     </View>
